@@ -1,7 +1,7 @@
 Summary: Share mouse and keyboard between multiple computers over the network
 Name: synergy
-Version: 1.4.10
-Release: 2%{?dist}
+Version: 1.4.15
+Release: 1%{?dist}
 License: GPLv2
 Group: System Environment/Daemons
 URL: http://synergy-foss.org/
@@ -29,6 +29,7 @@ as moving the mouse off the edge of your screen.
 
 
 %build
+./hm.sh conf -g1
 %{cmake} .
 make %{?_smp_mflags}
 
